@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gregory Perez - Monteur Vidéo</title>
+    <meta name="description"
+        content="Monteur vidéo freelance basé à Narbonne. Montage YouTube, Reels, Shorts, et TikTok. Devis gratuit et rapide.">
+    <meta property="og:title" content="Gregory Perez - Monteur Vidéo Freelance">
+    <meta property="og:description"
+        content="Montage vidéo professionnel pour YouTube, réseaux sociaux et entreprises. Basé à Narbonne, disponible partout en France.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Curseur custom -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Vidéo d'arrière-plan -->
+    <video class="bg-video" autoplay loop muted playsinline preload="auto" aria-hidden="true">
+        <source src="images/background-video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Contrôle de la musique de fond -->
+    <button id="music-toggle" class="music-toggle-btn" aria-label="Activer la musique de fond">
+        <i class="fas fa-volume-mute"></i>
+    </button>
+    <audio id="bg-music" loop preload="none">
+        <source src="audio/bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Navigation Dynamic Island -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-island">
+            <div class="logo">GP<span class="logo-dot">.</span></div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#accueil" class="nav-link active" data-page="accueil">Accueil</a></li>
+                <li><a href="#services" class="nav-link" data-page="services">Services</a></li>
+                <li><a href="#realisations" class="nav-link" data-page="realisations">Réalisations</a></li>
+                <li><a href="#a-propos" class="nav-link" data-page="a-propos">Parcours</a></li>
+                <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+            <div class="nav-clock" id="nav-clock">Narbonne <span id="clock-time">00:00:00</span></div>
+            <!-- Menu hamburger mobile -->
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Accueil -->
+    <section id="accueil" class="page active section-hero">
+        <div class="container">
+            <!-- Hero -->
+            <div class="hero">
+                <p class="hero-overline fade-in">Monteur vidéo freelance - Narbonne</p>
+                <h1 class="hero-title fade-in">
+                    MONTER POUR<br>
+                    <span class="hero-title-accent">IMPACTER.</span>
+                </h1>
+                <div class="hero-footer fade-in">
+                    <div class="hero-footer-left">
+                        <p class="hero-name">GRÉGORY PEREZ</p>
+                        <p class="hero-role">Monteur vidéo freelance</p>
+                    </div>
+                    <div class="hero-footer-right">
+                        <a href="#contact" class="btn-primary nav-link" data-page="contact">
+                            Demander un devis <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-scroll-indicator">
+                    <a href="#services" class="scroll-btn nav-link" data-page="services">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Services -->
+    <section id="services" class="page section-services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes services</h2>
+                <p class="section-desc">Vous vous concentrez sur le contenu, je m'occupe du montage !</p>
+            </div>
+
+            <div class="services-detail-grid">
+                <div class="service-detail-card" style="--card-accent: var(--purple);">
+                    <div class="service-detail-number">01</div>
+                    <div class="service-detail-icon" style="background: rgba(139, 92, 246, 0.1); color: var(--purple);">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>Montage YouTube</h3>
+                    <p class="service-detail-desc">Des vidéos longues qui gardent l'attention du début à
+                        la fin.
+                        Voici ce qui est inclus :</p>
+                    <ul class="service-includes">
+                        <li><i class="fas fa-arrow-right"></i> Montage horizontal : coupes et transitions</li>
+                        <li><i class="fas fa-arrow-right"></i> Étalonnage couleur</li>
+                        <li><i class="fas fa-arrow-right"></i> Motion design</li>
+                        <li><i class="fas fa-arrow-right"></i> Sound design et musique</li>
+                        <li><i class="fas fa-arrow-right"></i> Sous-titres si nécessaires</li>
+                        <li><i class="fas fa-arrow-right"></i> 2 séries de retouches</li>
+                    </ul>
+                    <div class="service-pricing">Sur devis</div>
+                </div>
+
+                <div class="service-detail-card" style="--card-accent: var(--purple);">
+                    <div class="service-detail-number">02</div>
+                    <div class="service-detail-icon" style="background: rgba(139, 92, 246, 0.1); color: var(--purple);">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>Reels, Shorts & TikTok</h3>
+                    <p class="service-detail-desc">Des vidéos courtes qui gardent l'attention du début à la fin.
+                        Voici ce qui est inclus :</p>
+                    <ul class="service-includes">
+                        <li><i class="fas fa-arrow-right"></i> Montage vertical : coupes et transitions</li>
+                        <li><i class="fas fa-arrow-right"></i> Étalonnage couleur</li>
+                        <li><i class="fas fa-arrow-right"></i> Motion design</li>
+                        <li><i class="fas fa-arrow-right"></i> Sound design et musique</li>
+                        <li><i class="fas fa-arrow-right"></i> Sous-titres si nécessaires</li>
+                        <li><i class="fas fa-arrow-right"></i> 2 séries de retouches</li>
+                    </ul>
+                    <div class="service-pricing">Sur devis</div>
+                </div>
+            </div>
+
+            <!-- Comment je tarifie -->
+            <div class="pricing-explanation">
+                <h3 class="pricing-title">Tarification</h3>
+                <p class="pricing-desc">Voici mes tarifs selon vos besoins :</p>
+                <div class="pricing-cards">
+
+                    <!-- Formule 1 -->
+                    <div class="pricing-card">
+                        <h4>Au projet</h4>
+                        <div class="price">Dès 100€ <span>/ vidéo</span></div>
+                        <p class="desc">La formule idéale pour un premier projet ou un besoin ponctuel.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 1 vidéo livrée dans le délai fixé</li>
+                            <li><i class="fas fa-check"></i> Priorité sur les délais de rendu</li>
+                            <li><i class="fas fa-check"></i> Communication directe ou par mail</li>
+                            <li><i class="fas fa-check"></i> 2 séries de retouches</li>
+                        </ul>
+                    </div>
+
+                    <!-- Formule 2 -->
+                    <div class="pricing-card popular">
+                        <div class="pricing-card-badge">Recommandé</div>
+                        <h4>Au mois</h4>
+                        <div class="price">600€ <span>/ mois</span></div>
+                        <p class="desc">La formule avantageuse, parfaite pour avoir une présence régulière sur les
+                            réseaux.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 8 vidéos livrées dans le mois</li>
+                            <li><i class="fas fa-check"></i> Priorité sur les délais de rendu</li>
+                            <li><i class="fas fa-check"></i> Communication directe ou par mail</li>
+                            <li><i class="fas fa-check"></i> 2 séries de retouches</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Process -->
+            <div class="process-section">
+                <h3 class="process-title">Comment ça se passe concrètement ?</h3>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="process-number">01</div>
+                        <h4>On échange</h4>
+                        <p>Vous me décrivez votre projet et je vous pose des questions. Le devis est
+                            envoyé sous 24h.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">02</div>
+                        <h4>Je monte</h4>
+                        <p>Je travaille sur votre vidéo et je vous envoie une première version dans les délais fixés.
+                        </p>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">03</div>
+                        <h4>On ajuste</h4>
+                        <p>On peaufine jusqu'à ce que le montage vous convienne. Deux séries de retouches sont incluses.
+                        </p>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">04</div>
+                        <h4>C'est livré</h4>
+                        <p>Vous recevez le fichier final dans le format de votre choix, prêt à être publié !</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="section-cta">
+                <h3>Un projet en tête ?</h3>
+                <p>Envoyez-moi un message, je vous réponds sous 24h.</p>
+                <a href="#contact" class="btn-primary nav-link" data-page="contact">
+                    Demander un devis <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Réalisations -->
+    <section id="realisations" class="page section-realisations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes réalisations</h2>
+                <p class="section-desc">Une sélection de mes vidéos.</p>
+            </div>
+
+            <!-- Catégorie 1 : Shorts pour la chaîne YouTube d'un ami -->
+            <div class="video-category" id="category-youtube">
+                <div class="video-category-header">
+                    <span class="video-category-icon"><i class="fab fa-youtube"></i></span>
+                    <div>
+                        <h3 class="video-category-title">Shorts YouTube</h3>
+                        <p class="video-category-desc">Shorts gaming à caractère humoristique montés pour la chaîne
+                            d'un ami.</p>
+                    </div>
+                    <span class="video-category-count">6 vidéos</span>
+                </div>
+                <div class="videos-grid">
+                    <div class="video-tile">
+                        <video id="video-1" src="images/short-c9.mp4#t=0.1" controls preload="metadata"
+                            playsinline></video>
+                    </div>
+                    <div class="video-tile">
+                        <video id="video-2" src="images/short-mauga.mp4#t=0.1" controls preload="metadata"
+                            playsinline></video>
+                    </div>
+                    <div class="video-tile">
+                        <video id="video-3" src="images/short-mauga2.mp4#t=0.1" controls preload="metadata"
+                            playsinline></video>
+                    </div>
+                    <div class="video-tile">
+                        <video id="video-4" src="images/short-shatter.mp4#t=0.1" controls preload="metadata"
+                            playsinline></video>
+                    </div>
+                    <div class="video-tile">
+                        <video id="video-5" src="images/short-shatter-aura.mp4#t=0.1" controls preload="metadata"
+                            playsinline></video>
+                    </div>
+                    <div class="video-tile">
+                        <video id="video-6" src="images/short-ult-zarya.mp4#t=0.1" controls preload="metadata"
+                            playsinline></video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Catégorie 2 : Shorts pour une entreprise -->
+            <div class="video-category" id="category-entreprise">
+                <div class="video-category-header">
+                    <span class="video-category-icon"><i class="fas fa-briefcase"></i></span>
+                    <div>
+                        <h3 class="video-category-title">Reels Instagram - Myria Editions</h3>
+                        <p class="video-category-desc">Contenus courts réalisés pour les réseaux sociaux de Myria
+                            Editions, une maison d'édition.</p>
+                    </div>
+                    <span class="video-category-count">2 vidéos</span>
+                </div>
+                <div class="videos-grid">
+                    <div class="video-tile">
+                        <video id="video-7" src="images/project9/project9.mp4" poster="images/project9/project9.png"
+                            controls preload="metadata" playsinline></video>
+                    </div>
+                    <div class="video-tile">
+                        <video id="video-8" src="images/project10/project10.mp4" poster="images/project10/project10.png"
+                            controls preload="metadata" playsinline></video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Catégorie 3 : Projets scolaires -->
+            <div class="video-category" id="category-scolaire">
+                <div class="video-category-header">
+                    <span class="video-category-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <div>
+                        <h3 class="video-category-title">Projets scolaires</h3>
+                        <p class="video-category-desc">Diverses vidéos réalisées dans le cadre de mon BUT MMI, avec
+                            certaines consignes : motion design, court-métrage, publicité...
+                        </p>
+                    </div>
+                    <span class="video-category-count">4 vidéos</span>
+                </div>
+                <div class="videos-grid">
+                    <div class="video-tile">
+                        <video id="video-9" src="images/project6/project6.mp4" poster="images/project6/project6.png"
+                            controls preload="metadata" playsinline></video>
+                    </div>
+                    <div class="video-tile">
+                        <video id="video-10" src="images/project7/project7.mp4" poster="images/project7/project7.png"
+                            controls preload="metadata" playsinline></video>
+                    </div>
+                    <div class="video-tile">
+                        <video id="video-11" src="images/project4/project4.mp4" poster="images/project4/project4.png"
+                            controls preload="metadata" playsinline></video>
+                    </div>
+                    <div class="video-tile">
+                        <video id="video-12" src="images/project5/project5.mp4" poster="images/project5/project5.png"
+                            controls preload="metadata" playsinline></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page À propos -->
+    <section id="a-propos" class="page section-about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mon parcours</h2>
+                <p class="section-desc">Qui je suis, et d'où je viens ?</p>
+            </div>
+
+            <div class="about-profile">
+                <div class="about-image-container">
+                    <img src="images/profile.jpg" alt="Gregory Perez" class="about-image">
+                </div>
+                <div class="about-text">
+                    <h3>Gregory Perez</h3>
+                    <p>Monteur vidéo freelance basé sur Narbonne. Je sors d'un BUT Métiers du Multimédia et de
+                        l'Internet à Béziers, et j'ai décidé de me lancer en indépendant dans ce que je fais le mieux :
+                        monter des
+                        vidéos.</p>
+                    <p>J'aime les montages dynamiques et les vidéos qui gardent l'attention. Que ce soit du contenu
+                        YouTube ou des formats courts pour les réseaux, mon but est toujours le
+                        même : <strong>que votre vidéo donne envie d'être regardée jusqu'au bout</strong>.</p>
+                </div>
+            </div>
+
+            <!-- Logiciels -->
+            <div class="tools-section">
+                <h3 class="tools-title">Mes outils</h3>
+                <div class="tools-grid">
+                    <div class="tool-item">
+                        <img src="images/logos/PR.png" alt="Premiere Pro">
+                        <span>Premiere Pro</span>
+                    </div>
+                    <div class="tool-item">
+                        <img src="images/logos/AE.png" alt="After Effects">
+                        <span>After Effects</span>
+                    </div>
+                    <div class="tool-item">
+                        <img src="images/logos/DaVinci.png" alt="DaVinci Resolve">
+                        <span>DaVinci Resolve</span>
+                    </div>
+                    <div class="tool-item">
+                        <img src="images/logos/PS.png" alt="Photoshop">
+                        <span>Photoshop</span>
+                    </div>
+                    <div class="tool-item">
+                        <img src="images/logos/AI.png" alt="Illustrator">
+                        <span>Illustrator</span>
+                    </div>
+                    <div class="tool-item">
+                        <img src="images/logos/Canva.png" alt="Canva">
+                        <span>Canva</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parcours -->
+            <div class="timeline-section">
+                <h3>Expériences</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026 -> Aujourd'hui</div>
+                        <div class="timeline-content">
+                            <h4>Monteur vidéo freelance</h4>
+                            <p>Auto-entrepreneur : Montage vidéo pour créateurs et entreprises</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Fév. -> Avr. 2026</div>
+                        <div class="timeline-content">
+                            <h4>Stagiaire vidéaste : GRETA-CFA Hérault Ouest</h4>
+                            <p>Contenus vidéo pour les réseaux sociaux, couverture d'événements</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Juil. 2025</div>
+                        <div class="timeline-content">
+                            <h4>Monteur vidéo vacataire : GRETA-CFA Hérault Ouest</h4>
+                            <p>Montage de vidéos promotionnelles</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Avr. -> Juin 2025</div>
+                        <div class="timeline-content">
+                            <h4>Stagiaire vidéaste : GRETA-CFA Hérault Ouest</h4>
+                            <p>Tournage et montage de vidéos promotionnelles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formation -->
+            <div class="education-section">
+                <h3>Formation</h3>
+                <div class="education-row">
+                    <div class="education-item">
+                        <span class="edu-year">2023 -> 2026</span>
+                        <h4>BUT MMI - IUT de Béziers</h4>
+                        <p>Métiers du Multimédia et de l'Internet</p>
+                    </div>
+                    <div class="education-item">
+                        <span class="edu-year">2020 -> 2023</span>
+                        <h4>Bac Général - Lycée Louise Michel</h4>
+                        <p>Spécialités Mathématiques & NSI</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collaborations -->
+            <div class="collab-section">
+                <h3>Ils m'ont fait confiance</h3>
+                <div class="collab-grid">
+                    <div class="collab-card">
+                        <div class="collab-logo">
+                            <img src="images/logos/myria-editions.png" alt="Myria Editions">
+                        </div>
+                        <div class="collab-info">
+                            <h4>Myria Editions</h4>
+                            <p>Vidéos courtes pour les réseaux sociaux de la maison d'édition</p>
+                        </div>
+                    </div>
+                    <div class="collab-card">
+                        <div class="collab-logo collab-logo-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="collab-info">
+                            <h4>GRETA-CFA Hérault Ouest</h4>
+                            <p>Vidéos promotionnelles et couverture d'événements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CV -->
+            <div class="cv-banner">
+                <div class="cv-banner-content">
+                    <i class="fas fa-file-pdf cv-icon"></i>
+                    <div>
+                        <h3>Mon CV</h3>
+                        <p>Téléchargez mon CV pour un aperçu complet de mes compétences et de mon parcours.</p>
+                    </div>
+                </div>
+                <a href="images/gregory-perez-cv.pdf" class="btn-primary" download>
+                    <i class="fas fa-download"></i> Télécharger
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Contact -->
+    <section id="contact" class="page section-contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-desc">Travaillons ensemble ! Décrivez-moi votre projet et je reviens vers vous sous
+                    24h avec un devis.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-methods">
+                        <a href="mailto:gregoryp161@gmail.com" class="contact-method-link">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <span>gregoryp161@gmail.com</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/greg.prz" target="_blank" rel="noopener noreferrer"
+                            class="contact-method-link">
+                            <div class="contact-method">
+                                <i class="fab fa-instagram"></i>
+                                <div>
+                                    <h4>Instagram</h4>
+                                    <span>@greg.prz</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/gregoryperez" target="_blank" rel="noopener noreferrer"
+                            class="contact-method-link">
+                            <div class="contact-method">
+                                <i class="fab fa-linkedin"></i>
+                                <div>
+                                    <h4>LinkedIn</h4>
+                                    <span>Gregory Perez</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Localisation</h4>
+                                <span>Narbonne, disponible en distanciel partout</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom / Entreprise</label>
+                        <input type="text" id="name" name="name" placeholder="Comment vous appelez-vous ?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Quel type de projet ?</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Choisissez…</option>
+                            <option value="youtube">Montage YouTube</option>
+                            <option value="shorts">Reels / Shorts / TikTok</option>
+                            <option value="autre">Autre chose</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Parlez-moi de votre projet</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="L'objectif de la vidéo, la durée, votre deadline, le style que vous aimez…"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        Envoyer <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">GP<span>.</span></div>
+                <p>Monteur vidéo freelance à Narbonne.</p>
+            </div>
+            <div class="footer-center">
+                <a href="#accueil" class="nav-link footer-nav-link">Accueil</a>
+                <a href="#services" class="nav-link footer-nav-link">Services</a>
+                <a href="#realisations" class="nav-link footer-nav-link">Réalisations</a>
+                <a href="#a-propos" class="nav-link footer-nav-link">Parcours</a>
+                <a href="#contact" class="nav-link footer-nav-link">Contact</a>
+            </div>
+            <div class="footer-right">
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/greg.prz" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/gregoryperez" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gregory Perez - Tous droits réservés. SIRET : [à compléter]</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
